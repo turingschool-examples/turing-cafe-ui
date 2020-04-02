@@ -1,6 +1,6 @@
-import React from 'react'
-import Reservation from 
-import PropTypes from 'prop-types'
+import React from 'react';
+import Reservation from '../Reservation/Reservation';
+import PropTypes from 'prop-types';
 
 class Reservations extends React.Component {
   constructor() {
@@ -17,14 +17,23 @@ class Reservations extends React.Component {
       .catch(err => console.error(err))
   }
 
-  buildReservationsComponent() {
-    this.state.reservations.map(reservation => {
-      return
+  buildReservationComponents() {
+    const { reservations } = this.state;
+    return reservations.map(reservation => {
+      return (<Reservation
+      date={reservation.date}
+      id={reservation.id}
+      name={reservation.name}
+      number={reservation.number}
+      time={reservation.time}
+      />)
     })
   }
 
   render () {
-    return (<p>yo</p>)
+    return (
+      this.buildReservationComponents()
+    )
   }
 }
 
