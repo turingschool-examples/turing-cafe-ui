@@ -25,7 +25,10 @@ describe('Form', () => {
   })
 
   it('should update state when inputs are filled out', () => {
-
+    const { getByPlaceholderText } = render(<Form />);
+    const nameInput = getByPlaceholderText('Name');
+    fireEvent.change(nameInput, { target: { value: 'John' } })
+    expect(nameInput.value).toEqual('John')
   })
 
 })
