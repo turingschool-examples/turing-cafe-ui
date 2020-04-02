@@ -7,19 +7,11 @@ class Reservations extends React.Component {
   constructor() {
     super();
     this.state = {
-      reservations: []
     }
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/reservations')
-      .then(res => res.json())
-      .then(data => this.setState({reservations: data}))
-      .catch(err => console.error(err))
-  }
-
   buildReservationComponents() {
-    const { reservations } = this.state;
+    const reservations = this.props.reservations;
     return reservations.map(reservation => {
       return (<Reservation
       date={reservation.date}
