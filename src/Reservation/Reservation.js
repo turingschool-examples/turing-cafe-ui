@@ -10,8 +10,11 @@ class Reservation extends React.Component {
 
   render () {
     return (
-      <article>
+      <article className="reservation-card">
         <h2>{this.props.name}</h2>
+        <p>{this.props.date}</p>
+        <p>{this.props.time} pm</p>
+        <p>Number of guests: {this.props.number}</p>
       </article>
     )
   }
