@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   addReservation = (reservation) => {
-    console.log(666);
     this.setState({reservations: this.state.reservations.concat(reservation)})
   }
 
