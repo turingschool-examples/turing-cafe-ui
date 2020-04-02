@@ -1,0 +1,4 @@
+.resy-container {
+  display: flex;
+  flex-direction: row;
+}

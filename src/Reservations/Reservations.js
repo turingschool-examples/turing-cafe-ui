@@ -1,6 +1,7 @@
 import React from 'react';
 import Reservation from '../Reservation/Reservation';
 import PropTypes from 'prop-types';
+import './Reservations.css'
 
 class Reservations extends React.Component {
   constructor() {
