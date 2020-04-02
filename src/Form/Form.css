@@ -1,0 +1,14 @@
+form {
+  margin-bottom: 2em;
+}
+
+input {
+  padding: 1em;
+  margin-right: 1em;
+}
+
+#submit {
+  background: #008080;
+  color: white;
+  padding: 1em;
+}
