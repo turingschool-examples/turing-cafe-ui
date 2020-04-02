@@ -16,6 +16,7 @@ class Reservation extends React.Component {
         <p>{this.props.date}</p>
         <p>{this.props.time} pm</p>
         <p>Number of guests: {this.props.number}</p>
+        <button className="cancel">Cancel</button>
       </article>
     )
   }
