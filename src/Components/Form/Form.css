@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90vw;
+}
+
+input {
+  margin: 2vw;
+  width: 17%;
+  height: 1.75vw;
+  padding-left: 0.5vw;
+}
+
+.res-btn {
+  width: 19%;
+  height: 2.25vw;
+  margin: 2vw;
+  font-size: 1vw;
+  color: #FFFFFF;
+  background-color: teal;
+  border: 0.5px solid #FFFFFF;
+}
