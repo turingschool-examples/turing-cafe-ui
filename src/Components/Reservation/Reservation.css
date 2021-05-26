@@ -1,0 +1,29 @@
+.resy-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  margin: 1vw;
+  padding: 1vw;
+}
+
+.resy-card {
+  align-self: flex-start;
+  width: 17%;
+  margin: 1vw;
+  padding-bottom: 1vw;
+  color: teal;
+  background-color: #FFFFFF;
+  border: 4px solid teal;
+  border-radius: 5%;
+}
+
+.cancel-btn {
+  width: 75%;
+  height: 2vw;
+  color: #FFFFFF;
+  background-color: teal;
+  border: none;
+}
