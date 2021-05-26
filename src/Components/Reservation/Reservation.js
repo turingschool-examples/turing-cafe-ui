@@ -1,7 +1,7 @@
 import React from 'react';
 import './Reservation.css';
 
-const Reservation = ({ allReservations }) => {
+const Reservation = ({ allReservations, deleteReservation }) => {
 
 const resCards = allReservations.map(res => {
   return (
@@ -10,7 +10,13 @@ const resCards = allReservations.map(res => {
       <p>{res.date}</p>
       <p>{res.time} pm</p>
       <p>Number of guests: {res.number}</p>
-      <button className='cancel-btn'>Cancel</button>
+      <button 
+        id={res.id} 
+        key={res.id}
+        onClick={deleteReservation} 
+        className='cancel-btn'>
+          Cancel
+      </button>
     </article>
   )
 });

@@ -11,6 +11,18 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    fetch('http://localhost:3001/api/v1/reservations')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ allReservations: data });
+      })
+      .catch(error => {
+        console.log(error)
+        this.setState({ error: `Sorry, something went wrong.` })
+      })
+  }
+
   addReservation = (newRes) => {
     this.setState({ allReservations: [...this.state.allReservations, newRes] });
     fetch('http://localhost:3001/api/v1/reservations', {
@@ -28,16 +40,27 @@ class App extends Component {
       })
   }
 
-  getAllReservations = () => {
-    fetch('http://localhost:3001/api/v1/reservations')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ allReservations: data })
-      });
-  }
-
-  componentDidMount = () => {
-    this.getAllReservations();
+  deleteReservation = (e) => {
+    console.log(e.target);
+    const id = parseInt(e.target.id);
+    const filteredReservations = this.state.allReservations.filter(resy => {
+      return resy.id !== id;
+    });
+    this.setState({ allReservations: filteredReservations });
+    
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE',
+      redirect: 'follow'
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log(response)
+        response.text();
+      } else {
+        throw new Error(`Sorry, we could not remove the reservation.`);
+      }
+    })
+    .catch(error => console.log('error', error));
   }
 
   render() {
@@ -48,7 +71,10 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <Reservation allReservations={this.state.allReservations} />
+          <Reservation 
+            allReservations={this.state.allReservations} 
+            deleteReservation={this.deleteReservation}
+          />
         </div>
       </div>
     )
