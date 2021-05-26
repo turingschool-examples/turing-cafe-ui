@@ -7,14 +7,14 @@ const resCards = allReservations.map(res => {
   return (
     <article className='resy-card' id={res.id} key={res.id}>
       <h3 className='name'>{res.name}</h3>
-      <p>{res.date}</p>
-      <p>{res.time} pm</p>
-      <p>Number of guests: {res.number}</p>
-      <button 
+      <p className='date'>{res.date}</p>
+      <p className='time'>{res.time} pm</p>
+      <p className='number'>Number of guests: {res.number}</p>
+      <button
+        className='cancel-btn'
         id={res.id} 
         key={res.id}
-        onClick={deleteReservation} 
-        className='cancel-btn'>
+        onClick={deleteReservation}>
           Cancel
       </button>
     </article>

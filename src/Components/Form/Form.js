@@ -64,7 +64,7 @@ class Form extends Component {
           type='number'
           onChange={this.handleChange}
         />
-        <button onClick={this.submitReservation} className='res-btn'>Make Reservation</button>
+        <button className='res-btn' onClick={this.submitReservation} >Make Reservation</button>
       </form>
     )
   }
