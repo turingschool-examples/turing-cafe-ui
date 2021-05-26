@@ -18,7 +18,7 @@ class Form extends Component {
 
   submitReservation = (event) => {
     event.preventDefault();
-
+    
     const newRes = { 
       ...this.state, 
       number: parseInt(this.state.number), 
@@ -26,7 +26,6 @@ class Form extends Component {
     };
 
     this.props.addReservation(newRes);
-
     this.clearInputs();
   }
 
