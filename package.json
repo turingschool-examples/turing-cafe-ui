@@ -30,8 +30,8 @@
     ]
   },
   "devDependencies": {
-    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "cypress": "^6.4.0",
     "fsevents": "^1.2.13",
-    "cypress": "^6.4.0"
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
