@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import './Reservations.css'
 
 const Reservations = ({reservations}) => {
 
@@ -7,6 +8,7 @@ const Reservations = ({reservations}) => {
         return (
             <Card
             id={resy.id}
+            key={resy.id}
             name = {resy.name}
             date = {resy.date}
             time = {resy.time}
