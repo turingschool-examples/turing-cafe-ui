@@ -1,5 +1,6 @@
 const getReservations = () => {
     return fetch('http://localhost:3001/api/v1/reservations')
+    .then(checkForError)
 }
 
 const postReservations = (reservation) => {
@@ -18,4 +19,12 @@ const postReservations = (reservation) => {
     .then(response => response.json())
 }
 
-export {getReservations, postReservations}
+const checkForError = (response) => {
+    if (response.ok) {
+     return response.json()
+    } else {
+      throw new Error('Sorry, your request did not go through')
+    }
+  };
+
+export {getReservations, postReservations, checkForError}

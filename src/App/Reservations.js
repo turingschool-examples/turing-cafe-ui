@@ -2,8 +2,9 @@ import React from 'react'
 import Card from './Card.js'
 import './Reservations.css'
 
-const Reservations = ( { resy }) => {
-    const allCards = resy.map(reservation => {
+const Reservations = ({ reservations }) => {
+    console.log(reservations)
+    const allCards = reservations.map(reservation => {
         return ( 
             <Card
                 id={reservation.id}

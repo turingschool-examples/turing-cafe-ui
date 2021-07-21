@@ -5,9 +5,9 @@ const Card = ({ id, name, date, time, number}) => {
     return (
         <div className='each-card' id={id}>
             <h2>{name}</h2>
-            <p>{date}</p>
-            <p>{time}</p>
-            <p>{number}</p>
+            <p>Date: {date}</p>
+            <p>Time: {time} pm</p>
+            <p>Number of guests: {number}</p>
         </div>
     )
 }
