@@ -1,11 +1,10 @@
 import React from 'react';
-
+import './Card.css'
 
 const Card = ({id,name,date,time,number}) => {
-
     return (
         <section
-        className='resyCard'
+        className='reservationCard'
         id={id}
         key={id}
         >
@@ -15,8 +14,6 @@ const Card = ({id,name,date,time,number}) => {
             <p>Reservation Date: {number}</p>
         </section>
     )
-
 }
-
 
 export default Card;
