@@ -1,11 +1,14 @@
 import React from 'react';
+import Card from '../Card/Card';
 
 const Reservations = ({reservations}) => {
 
     let allReservations = reservations.map(resy => {
-        <Card
-        
-        />
+        return (
+            <Card
+            id={resy.id}
+            />
+        )
     })
     return (
         <section>
