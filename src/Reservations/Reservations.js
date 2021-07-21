@@ -16,8 +16,8 @@ const Reservations = ({reservations}) => {
     })
 
     return (
-        <section>
-            
+        <section className="reservation-wrapper">
+            {allReservations}
         </section>
     )
 }
