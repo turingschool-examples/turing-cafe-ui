@@ -51,9 +51,9 @@ Now that the functionality is there for adding a reservation, write some tests:
 * Write a test that checks that when data is put into the form, the value is reflected in that form input.
 * Write a test to check the user flow of adding a new reservation to the page.
 
-### Iteration 4 (extension)
+### Iteration 4 (extension - this _will_ be an expectation for the final assessment)
 
-When the user makes a reservation, the application should make a post request to the API. The new reservation should still exist upon reloading the page.
+When the user makes a reservation, the application should make a POST request to the API. The new reservation should still exist upon reloading the page.
 
 **Keep any fetch calls you write in the App component for now**
 
