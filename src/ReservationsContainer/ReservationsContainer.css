@@ -1,0 +1,8 @@
+.resy-cards {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  height: 120%;
+  align-items: flex-start;
+}
