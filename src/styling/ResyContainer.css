@@ -1,0 +1,5 @@
+.resy-container {
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "reservation reservation reservation reservation reservation";
+}
