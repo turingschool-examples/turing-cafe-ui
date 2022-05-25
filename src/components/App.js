@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styling/App.css';
 import getFetch from '../apiCalls.js'
 import ResyContainer from './ResyContainer.js'
+import Form from './Form.js'
 
 class App extends Component {
 
@@ -21,8 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-        </div>
+        <Form/>
         <ResyContainer reservations={this.state.reservations}/>
       </div>
     )
