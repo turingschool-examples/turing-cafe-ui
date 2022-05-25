@@ -57,22 +57,22 @@ class ResyForm extends Component {
             value={this.state.number}
             onChange={this.handleChange}
           />
-          <button
-            className="submitBtn"
-            type="submit"
-            onClick={() => {
-              this.props.handleClick({
-                id: new Date(),
-                name: this.state.name,
-                date: this.state.date,
-                time: this.state.time,
-                number: this.state.number,
-              });
-            }}
-          >
-            Make a Reservation
-          </button>
         </form>
+        <button
+          className="submitBtn"
+          type="submit"
+          onClick={() => {
+            this.props.handleClick({
+              id: new Date(),
+              name: this.state.name,
+              date: this.state.date,
+              time: this.state.time,
+              number: this.state.number,
+            });
+          }}
+        >
+          Make a Reservation
+        </button>
       </div>
     );
   }

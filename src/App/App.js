@@ -17,9 +17,9 @@ class App extends Component {
     .then(data => this.setState({data: data}))
   }
 
-  handleClick(newRes) {
-Event.preventDefault();
-    this.setState({data: [...this.state.data, newRes]})
+  handleClick = (newRes) => {
+
+    this.setState(prevState => ({data: [...prevState.data, newRes]}))
   }
 
   render() {
