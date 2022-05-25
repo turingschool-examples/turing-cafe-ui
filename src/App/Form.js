@@ -16,8 +16,21 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  postReservation = () => {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({name: this.state.name, date: this.state.date, time: this.state.time, number: this.state.number})
+    }
+    fetch('http://localhost:3001/api/v1/reservations', requestOptions)
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
+
+
   submitReservation = event => {
     event.preventDefault()
+
     const newRes = {
       id: Date.now(),
       ...this.state
@@ -65,7 +78,7 @@ class Form extends Component {
             value={this.state.number}
             onChange={event => this.handleChange(event)}
           />
-          <button onClick={event => this.submitReservation(event)} className='form-submit'>Make Reservation</button>
+          <button onClick={(event) => {this.submitReservation(event); this.postReservation();}} className='form-submit'>Make Reservation</button>
       </form>
     )
   }
