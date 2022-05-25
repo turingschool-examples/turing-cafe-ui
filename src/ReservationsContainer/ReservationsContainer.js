@@ -3,8 +3,23 @@ import ReservationCard from '../ReservationCard/ReservationCard.js'
 import './ReservationsContainer.css'
 
 const ReservationsContainer = ({ reservations  }) => {
+  let reservationCards = reservations.map(resy => {
+    return (
+      <ReservationCard
+        key={resy.id}
+        id={resy.id}
+        name={resy.name}
+        date={resy.date}
+        time={resy.time}
+        number={resy.number}
+      />
+    )
+  })
+
   return (
-    <h1>hello</h1>
+    <div>
+      {reservationCards}
+    </div>
   )
 }
 
