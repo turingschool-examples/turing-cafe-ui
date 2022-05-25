@@ -1,0 +1,11 @@
+.resy-card {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 16%;
+  background-color: #ffffff;
+  border: 5px solid #268080;
+  border-radius: 10px;
+  color: #268080;
+  margin: 0.5% 1% 0 1%;
+}
