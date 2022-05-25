@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
-import { reservations, menu } from './data.js'
+// import { reservations, menu } from './data.js'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      reservations: []
+      reservations: [],
+      error: false
     }
-    // console.log(reservations)
   }
 
   componentDidMount = () => {
-    this.setState({ reservations: reservations })
+    fetch(`http://localhost:3001/api/v1/reservations`)
+      .then(response => {
+        if (response.ok) {
+          this.setState({ error: false})
+          return response.json()
+        } else {
+          throw Error(response.statusText)
+        }
+      })
+      .then(data => this.setState({ reservations: data }))
+      .catch((error) => {
+        this.setState({ error: true })
+      }
+    )
   }
 
   render() {
