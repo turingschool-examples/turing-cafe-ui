@@ -6,12 +6,14 @@ This application was built with `create-react-app`.
 
 ### Set Up
 
-Clone down this repo.
+Fork and clone down the repo.
 
-On GitHub, create a new, empty repository and name it something like 'turing-cafe-fe'.
+<!-- On GitHub, create a new, empty repository and name it something like 'turing-cafe-fe'.
 
 By the end of the assessment, update the current remote (origin) and point it at the new URL of the repository you just created on GitHub. You can read how to do this [here](https://help.github.com/en/articles/changing-a-remotes-url). Once you've updated the remote, you should be able to push up to that repo after you have at least one commit.
-
+ -->
+`cd` into the repo you cloned down. 
+ 
 Run `npm install` to install dependencies for the repo.
 
 Run `npm start` to start up your React server.
