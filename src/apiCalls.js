@@ -10,4 +10,4 @@ const getFetch = () => {
   .catch(err => console.log(err))
 }
 
-export default getFetch
+export default getFetch;

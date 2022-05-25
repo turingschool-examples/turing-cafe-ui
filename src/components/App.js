@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styling/App.css';
 import getFetch from '../apiCalls.js'
 import ResyContainer from './ResyContainer.js'
 

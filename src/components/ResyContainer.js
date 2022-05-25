@@ -1,5 +1,6 @@
 import React from 'react';
 import Resy from './Resy.js'
+import '../styling/ResyContainer.css';
 
 const ResyContainer = ({reservations}) => {
   console.log(reservations)
@@ -16,7 +17,7 @@ const ResyContainer = ({reservations}) => {
 
 
   return (
-    <div>{reservationList}</div>
+    <div className="resy-container">{reservationList}</div>
   )
 }
 
