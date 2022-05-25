@@ -1,0 +1,29 @@
+.card-box {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: ghostwhite;
+  width: 20vw;
+  height: 20vh;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: teal 5px solid;
+}
+
+.cancel-btn {
+  background-color: teal;
+  color: ghostwhite;
+  width: 60%;
+  height: 15%;
+  border-radius: 4px;
+  border: none;
+  font-size: 1em;
+}

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+* {
+  color: teal;
+}
+
 .App {
   display: flex;
   flex-direction: column;
