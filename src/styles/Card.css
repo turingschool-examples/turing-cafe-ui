@@ -1,0 +1,28 @@
+.card {
+    width: 200px;
+    background-color: white;
+    border-radius: 1em;
+    border: 3px solid #008080;
+    padding: 2% 5%;
+    color: #008080;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.time::after {
+    content: " pm";
+}
+
+.number::before {
+    content: "Number of guests: ";
+}
+
+.cancelBtn {
+    background-color: #008080;
+    border: none;
+    width: 100%;
+    padding: 2% 5%;
+    color: white;
+}

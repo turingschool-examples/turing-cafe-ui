@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import CardsContainer from '../components/CardsContainer';
+import ResyForm from '../components/ResyForm';
 
 class App extends Component {
   constructor () {
     super()
     this.state = {
-
+      data: []
     }
   }
 
@@ -16,16 +18,15 @@ class App extends Component {
   }
 
   render() {
+    if (!this.state.data.length) {
+        return (<div className="App"><p>Loading</p></div>)
+    }
+
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-
-
-        </div>
-        <div className='resy-container'>
-          
-        </div>
+        <ResyForm />
+        <CardsContainer data={this.state.data}/>
       </div>
     )
   }
