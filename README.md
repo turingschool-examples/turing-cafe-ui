@@ -30,13 +30,13 @@ You will have 3 hours to build this application.
 
 We do want to see good commit habits - atomic commits that log small, focused changesets. Don't worry about creating GitHub issues, though.
 
-### Iteration 0
+### Iteration 0 (completed at 9:36)
 
 Pull down the [API repo](https://github.com/turingschool-examples/turing-cafe-api). Set up instructions are in that repository's README.
 
 Do *not* nest this inside your front-end repository.
 
-### Iteration 1
+### Iteration 1 
 
 Get all existing reservations on page load and display them on the DOM.
 
