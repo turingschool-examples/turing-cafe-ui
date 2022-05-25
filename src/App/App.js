@@ -17,6 +17,11 @@ class App extends Component {
     .then(data => this.setState({data: data}))
   }
 
+  handleClick(newRes) {
+Event.preventDefault();
+    this.setState({data: [...this.state.data, newRes]})
+  }
+
   render() {
     if (!this.state.data.length) {
         return (<div className="App"><p>Loading</p></div>)
@@ -25,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <ResyForm />
+        <ResyForm handleClick={this.handleClick}/>
         <CardsContainer data={this.state.data}/>
       </div>
     )

@@ -1,0 +1,17 @@
+.resy-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+form {
+      width: 100%;
+    display: flex;
+    justify-content: space-around;  
+}
+.submitBtn {
+    background-color: #008080;
+    border: none;
+
+    color: white;
+}
