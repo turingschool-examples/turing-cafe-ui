@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReservationContainer from "../ReservationsContainer/Reservations";
 import Form from "../Form/Form";
 
 class App extends Component {
@@ -31,13 +32,6 @@ class App extends Component {
       .catch(response => console.error(response));
   };
 
-  deleteReservation = (deletedReservation) => {
-    this.setState({ reservations: this.state.reservations.filter(reservation => reservation.id !== deletedReservation.id) });
-    fetch(`http://localhost:3001/api/v1/reservations/${deletedReservation.id}`, { method: 'DELETE' })
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(response => console.error(response));
-  };
 
 
   render() {
@@ -46,6 +40,8 @@ class App extends Component {
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <Form
           saveReservation={this.saveReservation}
+          reservations={this.state.reservations} />
+        <ReservationContainer
           reservations={this.state.reservations} />
       </div>
     );
