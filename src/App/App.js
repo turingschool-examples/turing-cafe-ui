@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { fetchInformation } from '../apiCalls';
+import ReservationBox from '../Components/ReservationBox';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+
+  //need container - called in App
+  //need cards - called in ReservationBox
+
   render() {
     return (
       <div className="App">
@@ -11,7 +22,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ReservationBox />
         </div>
       </div>
     )
