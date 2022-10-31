@@ -17,7 +17,6 @@ const Reservations = ({reservations}) => {
     });
     return (
         <section className="reservations">
-            <h2>HELLO!</h2>
             {resyCards}
         </section>
     )
