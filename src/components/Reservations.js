@@ -1,5 +1,6 @@
 import React from 'react'
 import Resy from './Resy'
+import './Reservations.css'
 
 const Reservations = ({reservations}) => {
 const resys = reservations.map(resy => {
