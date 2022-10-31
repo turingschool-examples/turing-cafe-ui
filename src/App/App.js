@@ -7,12 +7,23 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      reservations: []
     }
   }
 
   //need container - called in App
   //need cards - called in ReservationBox
+  componentDidMount = () => {
+    fetch(`http://localhost:3001/api/v1/reservations`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      let reservationArray = data.map((data) => {return data})
+      this.setState({reservations: reservationArray})
+      console.log(this.state.reservations)
+    })
+    .catch(error => console.log(error))
+  }
 
   render() {
     return (
