@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchReservations } from '../api-calls';
+import { fetchCall } from '../api-calls';
 
 class App extends Component {
   constructor() {
@@ -11,11 +11,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+    fetchCall('reservations', "GET")
+    .then(data => {
+      console.log("This is our Reservations data: ", data);
+      // this.setState({reservations : data});
+    })
   }
 
 
   render() {
+    // console.log("over here++++", this.state.reservations);
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>

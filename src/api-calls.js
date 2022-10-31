@@ -1,6 +1,6 @@
-const fetchReservations = (type, verb) => {
+const fetchCall = (type, verb) => {
     if(verb === "GET"){
-        fetch(`http://localhost:3001/api/v1/${type}`)
+        return fetch(`http://localhost:3001/api/v1/${type}`)
         .then(response => {
             if(!response.ok) {
                 console.log(response.status);
@@ -14,4 +14,4 @@ const fetchReservations = (type, verb) => {
 
 }
 
-export default fetchReservations;
+export { fetchCall };
