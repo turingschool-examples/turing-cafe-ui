@@ -18,15 +18,23 @@ class App extends Component {
     .then((data) => this.setState({reservations:data}))
     .catch((err) => this.setState({error: err.message}))
   }
+  addReservation = (newReservation) => {
+    return this.setState({reservations: [ ...this.state.reservations, newReservation]})
+  }
+   cancelReservation = (id) => {
+    const displayAllButMe = this.state.reservations.filter((reservation) => reservation.id !== id)
+    this.setState({reservations: displayAllButMe})
+
+   }
   render() {
     return (
       <main className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form/>
+          <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <Display reservations={this.state.reservations}/>
+          <Display reservations={this.state.reservations} cancelReservation={this.cancelReservation}/>
         </div>
       </main>
     )
