@@ -6,12 +6,21 @@ const Reservations = ({ reservations }) => {
   const reservationCards = reservations.map(res => {
     return (
       <Card
+        id={res.id}
+        key={res.id}
+        name={res.name}
+        date={res.date}
+        time={res.time}
+        number={res.number}
+      />
     )
   })
   
-  return {
-
-  }
+  return (
+    <div>
+      {reservationCards}
+    </div>
+  )
 }
 
-export default fetchReservations;
+export default Reservations;
