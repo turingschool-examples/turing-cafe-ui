@@ -54,9 +54,11 @@ describe('Reservations Page', () => {
     cy.get("input").eq(2).type("1:30")
     cy.get("input").eq(3).type(1);
     cy.get("button").contains("Make Reservation").click();
-    cy.get(".card").eq(4).contains("Blanche");
-    cy.get(".card").eq(4).contains("1/1");
-    cy.get(".card").eq(4).contains("1:30");
-    cy.get(".card").eq(4).contains("1");
+    cy.get(".card").should("have.length", 5).should("be.visible");
+    cy.get(".card").eq(4).contains("Blanche").should("be.visible");
+    cy.get(".card").eq(4).contains("1/1").should("be.visible");
+    cy.get(".card").eq(4).contains("1:30").should("be.visible");
+    cy.get(".card").eq(4).contains("1").should("be.visible");
+    cy.get(".card").contains("Cancel").should("be.visible");
   });
 });
