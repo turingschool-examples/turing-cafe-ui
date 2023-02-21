@@ -13,12 +13,12 @@ class Form extends Component {
   }
 
   handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ name: value });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleClick = (res) => {
-    const newRes = {
+  handleClick = (event) => {
+    event.preventDefault();
+    const res = {
       id: Date.now(),
       ...this.state,
     };
