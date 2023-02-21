@@ -3,7 +3,7 @@ import ReservationDetails from "../ReservationDetails/ReservationDetails";
 import "./reservations.css";
 
 const Reservations = (props) => {
-  const { reservations } = props;
+  const { reservations, deleteRes } = props;
   const reservationCard = reservations.map((date) => {
     return (
       <ReservationDetails
@@ -11,6 +11,7 @@ const Reservations = (props) => {
         date={date.date}
         time={date.time}
         number={date.number}
+        deleteRes={deleteRes}
       />
     );
   });

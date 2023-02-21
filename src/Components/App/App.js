@@ -20,6 +20,13 @@ class App extends Component {
     });
   }
 
+  deleteRes = (id) => {
+    const filteredRes = this.state.reservations.filter(
+      (reservation) => reservation.id !== id
+    );
+    this.setState({ reservations: filteredRes });
+  };
+
   updateReservations = (newRes) => {
     this.setState({ reservations: [...this.state.reservations, newRes] });
   };
@@ -29,7 +36,10 @@ class App extends Component {
       <div className="App">
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <Form updateReservations={this.updateReservations} />
-        <Reservations reservations={this.state.reservations} />
+        <Reservations
+          reservations={this.state.reservations}
+          deleteRes={this.deleteRes}
+        />
         <div className="resy-container"></div>
       </div>
     );
