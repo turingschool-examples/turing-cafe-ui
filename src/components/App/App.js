@@ -3,6 +3,7 @@ import './App.css';
 // import reserved from '../../mockData/reserved'
 import Display from '../Display/Display';
 import snagReservation from '../apicalls/snagReservation';
+import Form from '../Form/Form';
 
 class App extends Component {
   constructor(){
