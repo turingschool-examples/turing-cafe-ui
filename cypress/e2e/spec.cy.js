@@ -31,10 +31,10 @@ describe('Reservations Page', () => {
       }
     ]
     )
-    cy.visit("http://localhost:3000/")
+    cy.visit("http://localhost:3000/");
   });
   it("Should display a header when a user visits the page", () => {
-    cy.get("h1").contains("Turing Cafe Reservations");
+    cy.get("h1").contains("Turing Cafe Reservations").should("be.visible");
   });
   it("Should have a form where a user can submit a new reservation, containing inputs and a button", () => {
     cy.get("input").should("have.length", 4);
@@ -48,10 +48,20 @@ describe('Reservations Page', () => {
     cy.get(".card").first().contains("Number of guests: 12");
     cy.get(".card").first().contains("Cancel");
   });
-  it("Should be able to submit a reservation", () => {
+  it("Should have the values typed into the form once a user types them", () => {
+    cy.get("input").first().type("Blanche");
+    cy.get("input").first().should("have.value", "Blanche").should("be.visible");
+    cy.get("input").eq(1).type("1/1");
+    cy.get("input").eq(1).should("have.value", "1/1").should("be.visible");
+    cy.get("input").eq(2).type("1:30");
+    cy.get("input").eq(2).should("have.value", "1:30").should("be.visible");
+    cy.get("input").eq(3).type(1);
+    cy.get("input").eq(3).should("have.value", "1").should("be.visible");
+  })
+  it("Should be able to submit a reservation in the form", () => {
     cy.get("input").first().type("Blanche");
     cy.get("input").eq(1).type("1/1");
-    cy.get("input").eq(2).type("1:30")
+    cy.get("input").eq(2).type("1:30");
     cy.get("input").eq(3).type(1);
     cy.get("button").contains("Make Reservation").click();
     cy.get(".card").should("have.length", 5).should("be.visible");
