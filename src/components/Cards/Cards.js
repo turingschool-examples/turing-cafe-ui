@@ -1,7 +1,7 @@
 import React from "react";
 import './Cards.css'
 
-const Cards = ({date,id, key,name,number,time}) => {
+const Cards = ({date,name,number,time}) => {
   return(
     <section className="card-body">
       <h2> {name} </h2>

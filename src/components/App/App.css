@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .app-title {
@@ -21,6 +22,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 90%;
+  height: 95%;
   margin-top:1%;
 }
