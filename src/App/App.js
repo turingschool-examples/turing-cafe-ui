@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetchReservations from '../apiCalls';
-import Reservations from "../Reservations"
+import Reservations from "../Reservations/Reservations";
 
 class App extends Component {
   constructor() {
@@ -14,6 +14,7 @@ class App extends Component {
   componentDidMount() {
     fetchReservations()
       .then(data => {
+        console.log(data);
         this.setState({reservations: data});
       })
   }
@@ -25,7 +26,9 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <Reservations 
+            reservations={this.state.reservations}
+          />
         </div>
       </div>
     )
