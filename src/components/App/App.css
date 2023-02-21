@@ -17,3 +17,10 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+.resy-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 90%;
+  margin-top:1%;
+}
