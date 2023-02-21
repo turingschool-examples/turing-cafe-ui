@@ -8,11 +8,29 @@ class Form extends React.Component {
       name: "",
       date: "",
       time: "",
-      numGuests: 0,
+      number: 0,
     };
   }
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  };
+
+  addNewRes = (e) => {
+    e.preventDefault();
+    const newRes = {
+      id: Date.now(),
+      ...this.state,
+    };
+    this.props.updateReservations(newRes);
+  };
+
+  clearInputs = () => {
+    this.setState({
+      name: "",
+      date: "",
+      time: "",
+      numGuests: 0,
+    });
   };
 
   render() {
@@ -43,19 +61,10 @@ class Form extends React.Component {
           type="number"
           placeholder="Number"
           name="number"
-          value={this.state.numGuests}
+          value={this.state.number}
           onChange={(e) => this.handleChange(e)}
         ></input>
-        <button
-          type="button"
-          onClick={(e) => this.addReservation(e)}
-          disabled={
-            !this.state.name ||
-            !this.state.date ||
-            !this.state.time ||
-            !this.state.numGuests
-          }
-        >
+        <button type="button" onClick={(e) => this.addNewRes(e)}>
           Submit
         </button>
       </form>
