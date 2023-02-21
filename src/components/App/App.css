@@ -25,3 +25,9 @@
   height: 95%;
   margin-top:1%;
 }
+.resy-form {
+  display: flex;
+  height: 15%;
+  width: 90%;
+  justify-content: center;
+}
