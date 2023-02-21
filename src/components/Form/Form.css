@@ -1,0 +1,17 @@
+.form-area {
+  display:flex; 
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ input{
+  height:15%;
+  padding: 1%;
+}
+.form-btn {
+ height:3rem;
+ background-color: teal;
+ color: white;
+ border: 1px solid white; 
+ width: 15%;
+}
