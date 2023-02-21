@@ -7,6 +7,8 @@ const Reservations = (props) => {
   const reservationCard = reservations.map((date) => {
     return (
       <ReservationDetails
+        id={date.id}
+        key={date.id}
         name={date.name}
         date={date.date}
         time={date.time}

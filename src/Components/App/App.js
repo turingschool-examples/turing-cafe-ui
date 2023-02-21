@@ -21,9 +21,12 @@ class App extends Component {
   }
 
   deleteRes = (id) => {
+    console.log("id: ", id);
+    console.log(this.state.reservations);
     const filteredRes = this.state.reservations.filter(
       (reservation) => reservation.id !== id
     );
+    console.log(filteredRes);
     this.setState({ reservations: filteredRes });
   };
 
