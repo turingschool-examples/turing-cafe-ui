@@ -39,7 +39,7 @@ describe('Reservations Page', () => {
   it("Should have a form where a user can submit a new reservation, containing inputs and a button", () => {
     cy.get("input").should("have.length", 4);
     cy.get("button").contains("Make Reservation").should("be.visible");
-  })
+  });
   it("Should display pre-existing reservations on the page", () => {
     cy.get(".card").should("have.length", 4);
     cy.get(".card").first().contains("Christie")
@@ -47,5 +47,16 @@ describe('Reservations Page', () => {
     cy.get(".card").first().contains("7:00")
     cy.get(".card").first().contains("Number of guests: 12");
     cy.get(".card").first().contains("Cancel");
-  })
-})
+  });
+  it("Should be able to submit a reservation", () => {
+    cy.get("input").first().type("Blanche");
+    cy.get("input").eq(1).type("1/1");
+    cy.get("input").eq(2).type("1:30")
+    cy.get("input").eq(3).type(1);
+    cy.get("button").contains("Make Reservation").click();
+    cy.get(".card").eq(4).contains("Blanche");
+    cy.get(".card").eq(4).contains("1/1");
+    cy.get(".card").eq(4).contains("1:30");
+    cy.get(".card").eq(4).contains("1");
+  });
+});
