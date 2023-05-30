@@ -1,0 +1,10 @@
+form {
+ margin:auto;
+}
+
+input{
+	margin: 5px;
+	width: 30%;
+	border: 2px teal solid;
+	font-size: 18px;
+}
