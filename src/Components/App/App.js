@@ -17,13 +17,16 @@ class App extends Component {
     .then(data=> this.setState({...this.state, reservations: data}))
   }
 
-  componentDidUpdate() {
-
-  }
-
-  addReservation = (resObject) => {
-    console.log(this.state)
-    console.log(resObject)
+  addReservation = async (resObject) => {
+    let url = 'http://localhost:3001/api/v1/reservations'
+    const postResults = await fetch(url, {
+      method: "POST",
+      headers: {
+        'Content-Type': "application/json",
+      },
+      body: JSON.stringify(resObject)
+    })
+    console.log(postResults)
     this.setState({reservations: [...this.state.reservations, resObject]})
   }
 

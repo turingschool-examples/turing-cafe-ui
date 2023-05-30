@@ -49,4 +49,32 @@ describe('As a user, I can navigate to the homepage and see: the App title, prev
     .type('12:35')
     .should('have.value', '12:35')
   })
+  it('As a user enters information and submits a new reservation, they should see that reservation added to the main page:', () => {
+    // User adding their details:
+    cy.get('#input-date')
+    .type('12/25')
+
+
+    cy.get('#input-name')
+    .type('Shane')
+
+
+    cy.get('#input-number')
+    .type('2')
+
+
+    cy.get('#input-time')
+    .type('12:35')
+
+    // User submits their added data:
+    cy.get('.submit-button').click()
+    // Confirm reservation addition representative of inputs above:
+    cy.get('.single-res').last().contains('Shane')
+
+    cy.get('.single-res').last().contains('Date: 12/25')
+
+    cy.get('.single-res').last().contains('Guests: 2')
+
+    cy.get('.single-res').last().contains('Time: 12:35')
+  })
 })
