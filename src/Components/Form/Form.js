@@ -36,7 +36,7 @@ class Form extends Component {
 
       <form className="input-box">
 
-        <input className="input-field"
+        <input className="input-field" id="input-date"
         type="text"
         placeholder="Reservation Date"
         name="date"
@@ -44,7 +44,7 @@ class Form extends Component {
         onChange={(event)=> {this.handleChange(event)}}
         />
 
-        <input className="input-field"
+        <input className="input-field" id="input-name"
         type="text"
         placeholder="Name for Reservation"
         name="name"
@@ -52,7 +52,7 @@ class Form extends Component {
         onChange={(event)=> {this.handleChange(event)}}
         />
 
-        <input className="input-field"
+        <input className="input-field" id="input-number"
         type="text"
         placeholder="Number of Guests"
         name="number"
@@ -60,7 +60,7 @@ class Form extends Component {
         onChange={(event)=> {this.handleChange(event)}}
         />
 
-        <input className="input-field"
+        <input className="input-field" id="input-time"
         type="text"
         placeholder="Time (Hour: Minute format)"
         name="time"
