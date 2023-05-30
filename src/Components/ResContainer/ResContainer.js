@@ -6,7 +6,7 @@ import './ResContainer.css'
 const ResContainer = ({reservations}) => {
   // pass in reservations from fetch as props, once app retrieves them from call, map over them, create reservation cards
   console.log(reservations)
-  const mappedRes = reservations.map(object=> <ReservationCard info={object} key={object.id}/>)
+  const mappedRes = reservations.map((object, index)=> <ReservationCard info={object} key={index}/>)
   return (
     <div className='res-container'>
       {mappedRes}

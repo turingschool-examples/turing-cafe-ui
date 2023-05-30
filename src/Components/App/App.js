@@ -17,12 +17,22 @@ class App extends Component {
     .then(data=> this.setState({...this.state, reservations: data}))
   }
 
+  componentDidUpdate() {
+
+  }
+
+  addReservation = (resObject) => {
+    console.log(this.state)
+    console.log(resObject)
+    this.setState({reservations: [...this.state.reservations, resObject]})
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <ResContainer reservations = {this.state.reservations}/>
-        <Form />
+        <Form addRes={this.addReservation}/>
       </div>
     )
   }

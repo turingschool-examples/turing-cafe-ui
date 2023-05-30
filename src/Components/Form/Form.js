@@ -8,8 +8,27 @@ class Form extends Component {
       date: '',
       name: '',
       time: '',
-      number: 0
+      number: ''
     }
+  }
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.addRes(this.state)
+    console.log('form object:', this.state)
+    this.clearInputs()
+  }
+
+  clearInputs() {
+    this.setState({
+      date: '',
+      name: '',
+      time: '',
+      number: ''
+    })
   }
 
   render() {
@@ -22,6 +41,7 @@ class Form extends Component {
         placeholder="Reservation Date"
         name="date"
         value={this.state.date}
+        onChange={(event)=> {this.handleChange(event)}}
         />
 
         <input className="input-field"
@@ -29,6 +49,7 @@ class Form extends Component {
         placeholder="Name for Reservation"
         name="name"
         value={this.state.name}
+        onChange={(event)=> {this.handleChange(event)}}
         />
 
         <input className="input-field"
@@ -36,6 +57,7 @@ class Form extends Component {
         placeholder="Number of Guests"
         name="number"
         value={this.state.number}
+        onChange={(event)=> {this.handleChange(event)}}
         />
 
         <input className="input-field"
@@ -43,8 +65,11 @@ class Form extends Component {
         placeholder="Time (Hour: Minute format)"
         name="time"
         value={this.state.time}
+        onChange={(event)=> {this.handleChange(event)}}
         />
-        <button className="submit-button">Submit</button>
+
+        <button className="submit-button" onClick={(event)=> {this.handleClick(event)}}>Make Reservation</button>
+
       </form>
     )
   }
