@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import Reservations from './reservations'
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       reservations: [],
       error: ""
@@ -32,7 +33,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <Reservations reservations={this.state.reservations}/>
         </div>
       </div>
     )
