@@ -8,6 +8,7 @@ const ReservationCard = ({info}) => {
       <h1 className="single-header">Name: {info.name}</h1>
       <span className="single-detail">ID: {info.number}</span>
       <span className="single-detail">Time: {info.time}</span>
+      <span className="single-detail">Date: {info.date}</span>
     </div>
   )
 }
