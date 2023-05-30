@@ -1,0 +1,19 @@
+.single-res {
+  background: rgba(255, 255, 255, 0.509);
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  width: 6rem;
+  padding: 1rem;
+  margin: .25rem;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+.single-header {
+  font-size: 1.25rem;
+}
+
+.single-detail {
+  padding: .2rem;
+}
