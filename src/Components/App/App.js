@@ -30,11 +30,18 @@ class App extends Component {
     this.setState({reservations: [...this.state.reservations, resObject]})
   }
 
+  removeReservation = (event) => {
+    // turn event string back into number:
+    let target = +event.target.id
+    const everythingElse = this.state.reservations.filter(reservation => reservation.id !== target)
+    this.setState({reservations: everythingElse})
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <ResContainer reservations = {this.state.reservations}/>
+        <ResContainer reservations={this.state.reservations} removeReservation={this.removeReservation}/>
         <Form addRes={this.addReservation}/>
       </div>
     )
