@@ -30,6 +30,13 @@ You will have 3 hours to build this application.
 
 We do want to see good commit habits - atomic commits that log small, focused changesets. Don't worry about creating GitHub issues, though.
 
+### Tips:
+- Your app should _generally_ match the comp but css/styling/comp matching are not the skills we're assessing here.  Deprioritize this so you don't spend too much time on it.
+- Error handling and client side validation is important, but is not what we're assessing here. Finish the functionality of iterations 0-3 before focusing on this.
+- Take poms and drink water. The 3 hour time frame was decided to allow for lots of poms.
+
+***************************************
+
 ### Iteration 0
 
 Pull down the [API repo](https://github.com/turingschool-examples/turing-cafe-api). Set up instructions are in that repository's README.
