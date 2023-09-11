@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { getReservationData } from '../../apiCalls';
 
 function App() {
   const [reservations, setReservations] = useState([]);
