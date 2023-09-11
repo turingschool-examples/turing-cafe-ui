@@ -11,7 +11,8 @@ function ReservContainer({reservations}){
             id={resy.id}
             date={resy.date}
             time={resy.time}
-            partySize={resy.number}/>
+            partySize={resy.number}
+            key={resy.id}/>
     
         )
     })

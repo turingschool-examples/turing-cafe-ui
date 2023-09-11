@@ -27,10 +27,13 @@ function App() {
     console.log('updated reservations', reservations)
   }, [reservations])
 
+  function addReservation(newResy){
+    setReservations([...reservations, newResy])
+  }
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <Form /> 
+        <Form addReservation={addReservation}/> 
       <div>
         <ReservContainer reservations={reservations}/>
       </div>
