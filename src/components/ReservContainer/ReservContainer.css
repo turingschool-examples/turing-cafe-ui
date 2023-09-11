@@ -1,0 +1,7 @@
+.resy-container {
+    width: 90vw;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
