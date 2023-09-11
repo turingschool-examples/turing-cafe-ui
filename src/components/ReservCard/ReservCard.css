@@ -3,4 +3,27 @@
     box-sizing: border-box;
     border: 3px solid black;
     padding: 10px;
+    height: auto;
+    width: 15vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius:15px;
+    color: teal;
+}
+.resy-card > p , h3{
+    margin-block-start: 0em;
+    margin-block-end: .5em;
+}
+
+img.delete-icon {
+    height: 10px;
+    width: auto;
+}
+button {
+    transition-duration: .3s;
+    background-color: teal;
+}
+button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
 }

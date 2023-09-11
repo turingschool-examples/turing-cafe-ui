@@ -1,0 +1,14 @@
+.resy-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90vw;
+}
+input {
+   margin-right: 5vw;
+    width: 10vw;
+}
+.resy-form > button {
+    width: 10vw;
+    color: white;
+}

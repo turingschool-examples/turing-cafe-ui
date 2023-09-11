@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 .App {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,10 +11,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  overflow-x: hidden;
+  padding: 10px;
 }
 
 .app-title {
   color: teal;
   font-family: 'Pacifico', cursive;
   font-size: 50px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
 }
