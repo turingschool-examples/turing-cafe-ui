@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react';
 import { fetchReservationData } from '../../apiCalls';
 import { useEffect, useState } from 'react';
-
+import ReservCard from '../ReservCard/ReservCard';
+import ReservContainer from '../ReservContainer/ReservContainer'
 function App() {
   const [reservations, setReservations] = useState([]);
   const [newError, setError] = useState("")
@@ -30,7 +31,8 @@ function App() {
       <h1 className='app-title'>Turing Cafe Reservations</h1>
       <div className='resy-form'>
       </div>
-      <div className='resy-container'>
+      <div>
+        <ReservContainer reservations={reservations}/>
       </div>
     </div>
   );
