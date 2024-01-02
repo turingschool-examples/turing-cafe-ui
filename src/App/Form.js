@@ -31,10 +31,10 @@ export default function Form({ addReservation }) {
 
   return (
     <form>
-      <input type="text" name="name" placeholder="Name" />
-      <input type="text" name="date" placeholder="Date" />
-      <input type="text" name="time" placeholder="Time" />
-      <input type="text" name="guests" placeholder="Guests" />
+      <input type="text" name="name" placeholder="Name" value={name} onChange={event => setName(event.target.value)}/>
+      <input type="text" name="date" placeholder="Date" value={date} onChange={event => setDate(event.target.value)}/>
+      <input type="text" name="time" placeholder="Time" value={time} onChange={event => setTime(event.target.value)}/>
+      <input type="text" name="guests" placeholder="Guests" value={guests} onChange={setGuests(event.target.value)}/>
       <button>Make Reservation </button>
     </form>
   );
