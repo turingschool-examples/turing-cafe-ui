@@ -6,10 +6,10 @@ export default function Reservations({ reservationData }) {
   const reservationCard = reservationData.map(reservation => {
     return (
       <Card 
-        firstName={reservation.name}
+        name={reservation.name}
         date={reservation.date}
         time={reservation.time}
-        number={reservation.number}
+        guests={reservation.number}
         key={reservation.id}
       />
     )
