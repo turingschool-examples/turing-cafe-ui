@@ -9,7 +9,7 @@ export default function Reservations({ reservationData }) {
         name={reservation.name}
         date={reservation.date}
         time={reservation.time}
-        guests={reservation.number}
+        number={reservation.number}
         key={reservation.id}
       />
     )
