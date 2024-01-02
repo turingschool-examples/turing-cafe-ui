@@ -18,7 +18,7 @@ export default function Form({ addReservation }) {
       guests
     }
     if(name && date && time && guests) {
-      addReservation()
+      addReservation(newReservation)
       clearInput()
     }
     function clearInput() {
@@ -32,10 +32,10 @@ export default function Form({ addReservation }) {
   return (
     <form>
       <input type="text" name="name" placeholder="Name" value={name} onChange={event => setName(event.target.value)}/>
-      <input type="text" name="date" placeholder="Date" value={date} onChange={event => setDate(event.target.value)}/>
-      <input type="text" name="time" placeholder="Time" value={time} onChange={event => setTime(event.target.value)}/>
-      <input type="text" name="guests" placeholder="Guests" value={guests} onChange={setGuests(event.target.value)}/>
-      <button>Make Reservation </button>
+      <input type="date" name="date" placeholder="Date" value={date} onChange={event => setDate(event.target.value)}/>
+      <input type="time" name="time" placeholder="Time" value={time} onChange={event => setTime(event.target.value)}/>
+      <input type="number" name="guests" placeholder="Guests" value={guests} onChange={ event => setGuests(event.target.value)}/>
+      <button onClick={event => submitForm(event)}>Make Reservation </button>
     </form>
   );
 }
